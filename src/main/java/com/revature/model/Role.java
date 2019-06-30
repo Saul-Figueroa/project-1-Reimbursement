@@ -17,10 +17,9 @@ public class Role {
 		this.id = id;
 	}
 
-	public Role(String name, String description) {
+	public Role(String name) {
 		this();
 		this.name = name;
-		this.description = description;
 	}
 
 	public Role(int id, String name, String description) {

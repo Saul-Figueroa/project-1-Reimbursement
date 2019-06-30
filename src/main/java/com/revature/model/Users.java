@@ -33,8 +33,38 @@ public class Users {
 		this.password = password;
 	}
 
+	
+	
 	public Users(int id, String firstName, String lastName, String email, String username, String password, Role role) {
 		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.username = username;
+		this.password = password;
+		this.role = role;
+	}
+	
+	public Users(int id, String firstName, String lastName, String email, String username, Role role) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.username = username;
+		this.role = role;
+	}
+	
+	public Users(int id,String firstName, String lastName, String email, String username, String password) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.username = username;
+		this.password = password;
+		
+	}
+
+	public Users(String firstName, String lastName, String email, String username, String password, Role role) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;

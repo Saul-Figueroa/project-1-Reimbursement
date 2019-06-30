@@ -1,1 +1,89 @@
 2019-06-28 12:59:44 INFO  ConnectionUtil:42 - Connection successful
+2019-06-30 12:16:18 INFO  UserRepositoryJDBC:88 - true
+2019-06-30 12:42:05 INFO  UserRepositoryJDBC:112 - Users [id=0, firstName=EMPLOYEE, lastName=EMPLOYEE, email=MYEMPLOYEE@GMAIL.COM, username=EMPLOYEE, password=1234, role=null]
+2019-06-30 12:49:54 INFO  UserRepositoryJDBC:114 - Users [id=2, firstName=EMPLOYEE, lastName=EMPLOYEE, email=MYEMPLOYEE@GMAIL.COM, username=EMPLOYEE, password=1234, role=Role [id=1, name=, description=]]
+2019-06-30 14:10:50 ERROR UserRepositoryJDBC:127 - Exception, could not retrieve all users 
+java.sql.SQLSyntaxErrorException: ORA-00904: "ER"."ER_I": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502)
+	at com.revature.repository.UserRepositoryJDBC.viewAllEmployees(UserRepositoryJDBC.java:110)
+	at com.revature.repository.UserRepositoryJDBC.main(UserRepositoryJDBC.java:141)
+2019-06-30 14:10:50 INFO  UserRepositoryJDBC:141 - 
+2019-06-30 14:11:31 ERROR UserRepositoryJDBC:127 - Exception, could not retrieve all users 
+java.sql.SQLSyntaxErrorException: ORA-00904: "ER"."ER_I": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502)
+	at com.revature.repository.UserRepositoryJDBC.viewAllEmployees(UserRepositoryJDBC.java:110)
+	at com.revature.repository.UserRepositoryJDBC.main(UserRepositoryJDBC.java:141)
+2019-06-30 14:11:31 INFO  UserRepositoryJDBC:141 - 
+2019-06-30 14:12:25 ERROR UserRepositoryJDBC:127 - Exception, could not retrieve all users 
+java.sql.SQLSyntaxErrorException: ORA-00904: "ER"."ER_I": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502)
+	at com.revature.repository.UserRepositoryJDBC.viewAllEmployees(UserRepositoryJDBC.java:110)
+	at com.revature.repository.UserRepositoryJDBC.main(UserRepositoryJDBC.java:141)
+2019-06-30 14:12:25 INFO  UserRepositoryJDBC:141 - 
+2019-06-30 14:14:03 ERROR UserRepositoryJDBC:127 - Exception, could not retrieve all users 
+java.sql.SQLSyntaxErrorException: ORA-00904: "ER"."ER_I": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502)
+	at com.revature.repository.UserRepositoryJDBC.viewAllEmployees(UserRepositoryJDBC.java:110)
+	at com.revature.repository.UserRepositoryJDBC.main(UserRepositoryJDBC.java:141)
+2019-06-30 14:14:03 INFO  UserRepositoryJDBC:141 - 
+2019-06-30 14:14:43 INFO  UserRepositoryJDBC:141 - [Users [id=21, firstName=TEST, lastName=TEST, email=TEST, username=TEST, password=null, role=Role [id=0, name=EMPLOYEE, description=]], Users [id=2, firstName=EMPLOYEE, lastName=EMPLOYEE, email=MYEMPLOYEE@GMAIL.COM, username=EMPLOYEE, password=null, role=Role [id=0, name=EMPLOYEE, description=]]]
+2019-06-30 14:23:54 INFO  UserRepositoryJDBC:135 - true
+2019-06-30 14:24:11 INFO  UserRepositoryJDBC:141 - [Users [id=21, firstName=TEST, lastName=TEST, email=TEST, username=TEST, password=null, role=Role [id=0, name=EMPLOYEE, description=]], Users [id=41, firstName=TEST2, lastName=TEST2, email=TEST2, username=TEST2, password=null, role=Role [id=0, name=EMPLOYEE, description=]], Users [id=2, firstName=EMPLOYEE, lastName=EMPLOYEE, email=MYEMPLOYEE@GMAIL.COM, username=EMPLOYEE, password=null, role=Role [id=0, name=EMPLOYEE, description=]]]
+2019-06-30 14:41:51 INFO  UserRepositoryJDBC:165 - true
+2019-06-30 14:43:05 INFO  UserRepositoryJDBC:162 - [Users [id=21, firstName=UPDATE, lastName=UPDATE, email=UPDATE@MAIL.COM, username=UPDATE, password=null, role=Role [id=0, name=EMPLOYEE, description=null]], Users [id=41, firstName=Jonh, lastName=Jonh, email=jonh@gmail.com, username=JONH, password=null, role=Role [id=0, name=EMPLOYEE, description=null]], Users [id=2, firstName=EMPLOYEE, lastName=EMPLOYEE, email=MYEMPLOYEE@GMAIL.COM, username=EMPLOYEE, password=null, role=Role [id=0, name=EMPLOYEE, description=null]]]

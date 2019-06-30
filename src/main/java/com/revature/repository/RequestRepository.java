@@ -18,9 +18,9 @@ public interface RequestRepository {
 	//view all resolved requests for all employees, view requests of an specific employee, 
 	//view all employees
 	public Request updateStatus(Request request);
-	public List<Request> viewPendingRequestsForAllEmployees(Request request);
-	public List<Request> viewResolvedRequestsForAllEmployees(Request request);
-	public List<Request> viewAllRequestsOfAnSpecificEmployee(Request request);
+	public List<Request> viewPendingRequestsForAllEmployees();
+	public List<Request> viewResolvedRequestsForAllEmployees();
+	public List<Request> viewAllRequestsOfAnSpecificEmployee();
 	
 	
 	
