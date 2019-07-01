@@ -119,3 +119,112 @@ java.sql.SQLException: Invalid column index
 2019-06-30 19:35:13 INFO  UserRepositoryJDBC:227 - [Request [id=21, timestamp=2019-06-30, amount=500.0, description=TRAVEL REIMBURSEMENT, user=null, status=Status [id=0, name=PENDING, description=]], Request [id=41, timestamp=2019-06-30, amount=300.0, description=New request, user=null, status=Status [id=0, name=PENDING, description=]], Request [id=42, timestamp=2019-06-30, amount=300.0, description=New request, user=null, status=Status [id=0, name=PENDING, description=]], Request [id=44, timestamp=2019-06-30, amount=300.0, description=New request, user=null, status=Status [id=0, name=PENDING, description=]], Request [id=45, timestamp=2019-06-30, amount=300.0, description=New request, user=null, status=Status [id=0, name=PENDING, description=]]]
 2019-06-30 19:35:13 INFO  UserRepositoryJDBC:230 - [Request [id=1, timestamp=2019-06-29, amount=250.0, description=TRAVEL REIMBURSEMENT, user=null, status=Status [id=0, name=APPROVED, description=]], Request [id=22, timestamp=2019-06-30, amount=300.0, description=New request, user=null, status=Status [id=0, name=DENIED, description=]], Request [id=43, timestamp=2019-06-30, amount=300.0, description=New request, user=null, status=Status [id=0, name=DENIED, description=]], Request [id=46, timestamp=2019-06-30, amount=300.0, description=New request, user=null, status=Status [id=0, name=DENIED, description=]]]
 2019-06-30 19:36:57 INFO  UserRepositoryJDBC:222 - [Request [id=21, timestamp=2019-06-30, amount=500.0, description=TRAVEL REIMBURSEMENT, user=Users [id=0, firstName=UPDATE, lastName=null, email=null, username=null, password=null, role=null], status=Status [id=0, name=PENDING, description=]], Request [id=41, timestamp=2019-06-30, amount=300.0, description=New request, user=Users [id=0, firstName=UPDATE, lastName=null, email=null, username=null, password=null, role=null], status=Status [id=0, name=PENDING, description=]], Request [id=42, timestamp=2019-06-30, amount=300.0, description=New request, user=Users [id=0, firstName=UPDATE, lastName=null, email=null, username=null, password=null, role=null], status=Status [id=0, name=PENDING, description=]]]
+2019-07-01 09:54:16 ERROR UserRepositoryJDBC:238 - Exception, could not retreive requests 
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.RequestRepositoryJDBC.viewAllRequestsOfAnSpecificEmployee(RequestRepositoryJDBC.java:232)
+	at com.revature.repository.RequestRepositoryJDBC.main(RequestRepositoryJDBC.java:262)
+2019-07-01 09:54:16 INFO  UserRepositoryJDBC:262 - 
+2019-07-01 09:55:22 ERROR UserRepositoryJDBC:238 - Exception, could not retreive requests 
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.RequestRepositoryJDBC.viewAllRequestsOfAnSpecificEmployee(RequestRepositoryJDBC.java:232)
+	at com.revature.repository.RequestRepositoryJDBC.main(RequestRepositoryJDBC.java:262)
+2019-07-01 09:55:22 INFO  UserRepositoryJDBC:262 - 
+2019-07-01 09:56:28 ERROR UserRepositoryJDBC:238 - Exception, could not retreive requests 
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.RequestRepositoryJDBC.viewAllRequestsOfAnSpecificEmployee(RequestRepositoryJDBC.java:232)
+	at com.revature.repository.RequestRepositoryJDBC.main(RequestRepositoryJDBC.java:262)
+2019-07-01 09:56:28 INFO  UserRepositoryJDBC:262 - 
+2019-07-01 09:58:10 ERROR UserRepositoryJDBC:238 - Exception, could not retreive requests 
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.RequestRepositoryJDBC.viewAllRequestsOfAnSpecificEmployee(RequestRepositoryJDBC.java:232)
+	at com.revature.repository.RequestRepositoryJDBC.main(RequestRepositoryJDBC.java:262)
+2019-07-01 09:58:10 INFO  UserRepositoryJDBC:262 - 
+2019-07-01 09:58:46 INFO  UserRepositoryJDBC:250 - [Request [id=21, timestamp=2019-06-30, amount=500.0, description=TRAVEL REIMBURSEMENT, user=Users [id=0, firstName=UPDATE, lastName=null, email=null, username=null, password=null, role=null], status=Status [id=0, name=PENDING, description=]], Request [id=41, timestamp=2019-06-30, amount=300.0, description=New request, user=Users [id=0, firstName=UPDATE, lastName=null, email=null, username=null, password=null, role=null], status=Status [id=0, name=PENDING, description=]], Request [id=42, timestamp=2019-06-30, amount=300.0, description=New request, user=Users [id=0, firstName=UPDATE, lastName=null, email=null, username=null, password=null, role=null], status=Status [id=0, name=PENDING, description=]]]
+2019-07-01 09:58:46 ERROR UserRepositoryJDBC:238 - Exception, could not retreive requests 
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.RequestRepositoryJDBC.viewAllRequestsOfAnSpecificEmployee(RequestRepositoryJDBC.java:232)
+	at com.revature.repository.RequestRepositoryJDBC.main(RequestRepositoryJDBC.java:262)
+2019-07-01 09:58:46 INFO  UserRepositoryJDBC:262 - 
+2019-07-01 10:00:06 ERROR UserRepositoryJDBC:240 - Exception, could not retreive requests 
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.RequestRepositoryJDBC.viewAllRequestsOfAnSpecificEmployee(RequestRepositoryJDBC.java:232)
+	at com.revature.repository.RequestRepositoryJDBC.main(RequestRepositoryJDBC.java:264)
+2019-07-01 10:00:06 INFO  UserRepositoryJDBC:264 - 
+2019-07-01 10:01:37 ERROR UserRepositoryJDBC:240 - Exception, could not retreive requests 
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.RequestRepositoryJDBC.viewAllRequestsOfAnSpecificEmployee(RequestRepositoryJDBC.java:232)
+	at com.revature.repository.RequestRepositoryJDBC.main(RequestRepositoryJDBC.java:264)
+2019-07-01 10:01:37 INFO  UserRepositoryJDBC:264 - 
+2019-07-01 10:01:54 ERROR UserRepositoryJDBC:240 - Exception, could not retreive requests 
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.RequestRepositoryJDBC.viewAllRequestsOfAnSpecificEmployee(RequestRepositoryJDBC.java:232)
+	at com.revature.repository.RequestRepositoryJDBC.main(RequestRepositoryJDBC.java:264)
+2019-07-01 10:01:54 INFO  UserRepositoryJDBC:264 - 
+2019-07-01 10:02:42 ERROR UserRepositoryJDBC:240 - Exception, could not retreive requests 
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.RequestRepositoryJDBC.viewAllRequestsOfAnSpecificEmployee(RequestRepositoryJDBC.java:232)
+	at com.revature.repository.RequestRepositoryJDBC.main(RequestRepositoryJDBC.java:264)
+2019-07-01 10:02:42 INFO  UserRepositoryJDBC:264 - 
+2019-07-01 10:03:33 ERROR UserRepositoryJDBC:240 - Exception, could not retreive requests 
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.RequestRepositoryJDBC.viewAllRequestsOfAnSpecificEmployee(RequestRepositoryJDBC.java:232)
+	at com.revature.repository.RequestRepositoryJDBC.main(RequestRepositoryJDBC.java:264)
+2019-07-01 10:03:33 INFO  UserRepositoryJDBC:264 - 
+2019-07-01 10:04:44 ERROR UserRepositoryJDBC:240 - Exception, could not retreive requests 
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.RequestRepositoryJDBC.viewAllRequestsOfAnSpecificEmployee(RequestRepositoryJDBC.java:232)
+	at com.revature.repository.RequestRepositoryJDBC.main(RequestRepositoryJDBC.java:264)
+2019-07-01 10:04:44 INFO  UserRepositoryJDBC:264 - 
+2019-07-01 10:06:15 ERROR UserRepositoryJDBC:240 - Exception, could not retreive requests 
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.RequestRepositoryJDBC.viewAllRequestsOfAnSpecificEmployee(RequestRepositoryJDBC.java:232)
+	at com.revature.repository.RequestRepositoryJDBC.main(RequestRepositoryJDBC.java:264)
+2019-07-01 10:06:15 INFO  UserRepositoryJDBC:264 - 
+2019-07-01 10:07:14 ERROR UserRepositoryJDBC:240 - Exception, could not retreive requests 
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.RequestRepositoryJDBC.viewAllRequestsOfAnSpecificEmployee(RequestRepositoryJDBC.java:232)
+	at com.revature.repository.RequestRepositoryJDBC.main(RequestRepositoryJDBC.java:264)
+2019-07-01 10:07:14 INFO  UserRepositoryJDBC:264 - 
+2019-07-01 10:08:02 INFO  UserRepositoryJDBC:264 - [Request [id=21, timestamp=2019-06-30, amount=500.0, description=TRAVEL REIMBURSEMENT, user=Users [id=0, firstName=UPDATE, lastName=, email=, username=, password=, role=null], status=Status [id=0, name=PENDING, description=]], Request [id=41, timestamp=2019-06-30, amount=300.0, description=New request, user=Users [id=0, firstName=UPDATE, lastName=, email=, username=, password=, role=null], status=Status [id=0, name=PENDING, description=]], Request [id=42, timestamp=2019-06-30, amount=300.0, description=New request, user=Users [id=0, firstName=UPDATE, lastName=, email=, username=, password=, role=null], status=Status [id=0, name=PENDING, description=]]]
+2019-07-01 10:08:48 INFO  UserRepositoryJDBC:264 - [Request [id=21, timestamp=2019-06-30, amount=500.0, description=TRAVEL REIMBURSEMENT, user=Users [id=0, firstName=UPDATE, lastName=, email=, username=, password=, role=null], status=Status [id=0, name=PENDING, description=]], Request [id=41, timestamp=2019-06-30, amount=300.0, description=New request, user=Users [id=0, firstName=UPDATE, lastName=, email=, username=, password=, role=null], status=Status [id=0, name=PENDING, description=]], Request [id=42, timestamp=2019-06-30, amount=300.0, description=New request, user=Users [id=0, firstName=UPDATE, lastName=, email=, username=, password=, role=null], status=Status [id=0, name=PENDING, description=]], Request [id=43, timestamp=2019-06-30, amount=300.0, description=New request, user=Users [id=0, firstName=UPDATE, lastName=, email=, username=, password=, role=null], status=Status [id=0, name=DENIED, description=]]]
+2019-07-01 10:11:07 INFO  UserRepositoryJDBC:264 - [Request [id=21, timestamp=2019-06-30, amount=500.0, description=TRAVEL REIMBURSEMENT, user=Users [id=0, firstName=LESLYE, lastName=, email=, username=, password=, role=null], status=Status [id=0, name=PENDING, description=]], Request [id=41, timestamp=2019-06-30, amount=300.0, description=New request, user=Users [id=0, firstName=LESLYE, lastName=, email=, username=, password=, role=null], status=Status [id=0, name=PENDING, description=]], Request [id=42, timestamp=2019-06-30, amount=300.0, description=New request, user=Users [id=0, firstName=LESLYE, lastName=, email=, username=, password=, role=null], status=Status [id=0, name=PENDING, description=]], Request [id=43, timestamp=2019-06-30, amount=300.0, description=New request, user=Users [id=0, firstName=LESLYE, lastName=, email=, username=, password=, role=null], status=Status [id=0, name=DENIED, description=]]]
+2019-07-01 11:14:34 INFO  UserRepositoryJDBC:282 - true

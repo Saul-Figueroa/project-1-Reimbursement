@@ -35,7 +35,7 @@ public class Users {
 
 	
 	public Users(String firstName) {
-		super();
+		this();
 		this.firstName = firstName;
 	}
 

@@ -31,6 +31,14 @@ public class Request {
 		super();
 		this.user = user;
 	}
+	
+	
+
+	public Request( Status status, int id) {
+		this.status = status;
+		this.id = id;
+	}
+
 
 	public Request( double amount, String description, Users user, Status status) {
 		this.amount = amount;
