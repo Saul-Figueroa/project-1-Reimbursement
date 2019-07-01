@@ -34,7 +34,11 @@ public class Users {
 	}
 
 	
-	
+	public Users(String firstName) {
+		super();
+		this.firstName = firstName;
+	}
+
 	public Users(int id, String firstName, String lastName, String email, String username, String password, Role role) {
 		this.id = id;
 		this.firstName = firstName;

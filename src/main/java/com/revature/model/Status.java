@@ -17,10 +17,10 @@ public class Status {
 		this.id = id;
 	}
 
-	public Status(String name, String description) {
+	public Status(String name) {
 		this();
 		this.name = name;
-		this.description = description;
+		
 	}
 
 

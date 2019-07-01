@@ -10,8 +10,8 @@ public interface RequestRepository {
 	//Employees can submit requests, view their pending and resolved requests 
 	//(could be approved or denied), view their information, update their information
 	public boolean submitRequest(Request request);
-	public Request viewPendingRequest(Request request);
-	public Request viewResolvedRequest(Request request);
+	public List<Request> viewPendingRequest(Request request);
+	public List<Request> viewResolvedRequest(Request request);
 
 	
 	//Managers can Approve/Deny pending requests, view all pending requests for all employees, 

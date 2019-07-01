@@ -26,7 +26,28 @@ public class Request {
 		this();
 		this.id = id;
 	}
+	
+	public Request(Users user) {
+		super();
+		this.user = user;
+	}
 
+	public Request( double amount, String description, Users user, Status status) {
+		this.amount = amount;
+		this.description = description;
+		this.user = user;
+		this.status = status;
+	}
+	
+
+	public Request(int id, Date timestamp, double amount, String description, Status status) {
+		this.id = id;
+		this.timestamp = timestamp;
+		this.amount = amount;
+		this.description = description;
+		this.status = status;
+	}
+	
 	public Request(int id, Date timestamp, double amount, String description, Users user, Status status) {
 		this.id = id;
 		this.timestamp = timestamp;
