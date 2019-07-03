@@ -9,4 +9,19 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <!-- Servlet declaration -->
+  <servlet>
+  	<servlet-name>DispatcherServlet</servlet-name>
+  	<servlet-class>com.revature.request.DispatcherServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DispatcherServlet</servlet-name>
+  	<!-- * it's a Wildcard (which means "anything")  -->
+  	<!-- . something it's called Extending Mapping -->
+  	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>
