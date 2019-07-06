@@ -2,54 +2,54 @@ package com.revature.service;
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
-
 import com.revature.model.Users;
-import com.revature.repository.UserRepository;
 import com.revature.repository.UserRepositoryJDBC;
 
 public class UserService implements UserServiceInterface{
 	
-	private static final Logger LOGGER = Logger.getLogger(UserService.class);
+		/*Singleton*/
+	private static UserService userService;
 	
-	//Dependency
-	
-	private UserRepository userRepository = UserRepositoryJDBC.getUserDaoJdbc();
-	
-	public boolean registerUser(Users user) {
-		LOGGER.trace("Entering register user " +user);
-		return true;
-		//return userRepository.insertUser(user);
-		
+	private UserService() {
 	}
-
+			
+	public static UserService getUserService() {
+		
+		if (userService == null) {
+			
+			userService = new UserService();		
+		}
+		return userService;
+	}
+			
+			
 	@Override
 	public boolean insertUser(Users user) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return UserRepositoryJDBC.getUserDaoJdbc().insertUser(user);
 	}
 
 	@Override
 	public Users viewInformation(Users user) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return UserRepositoryJDBC.getUserDaoJdbc().viewInformation(user);
 	}
 
 	@Override
 	public boolean updateInformation(Users user) {
-		// TODO Auto-generated method stub
-		return false;
+
+		return UserRepositoryJDBC.getUserDaoJdbc().updateInformation(user);
 	}
 
 	@Override
 	public List<Users> viewAllEmployees() {
-		// TODO Auto-generated method stub
-		return null;
+	
+		return UserRepositoryJDBC.getUserDaoJdbc().viewAllEmployees();
 	}
 
 	@Override
 	public Users authenticate(Users user) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
