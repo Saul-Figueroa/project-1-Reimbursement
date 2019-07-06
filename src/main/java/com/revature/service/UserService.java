@@ -14,11 +14,7 @@ public class UserService implements UserServiceInterface{
 	}
 			
 	public static UserService getUserService() {
-		
-		if (userService == null) {
-			
-			userService = new UserService();		
-		}
+	
 		return userService;
 	}
 			
@@ -54,3 +50,21 @@ public class UserService implements UserServiceInterface{
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

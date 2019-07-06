@@ -11,7 +11,7 @@ public class RequestHelper {
 	public static Object process(HttpServletRequest request) {
 	
 		switch (request.getRequestURI()) {
-		case "/login.do":
+		case "/project-1-Saul-Figueroa/login.do":
 			
 
 		default:
