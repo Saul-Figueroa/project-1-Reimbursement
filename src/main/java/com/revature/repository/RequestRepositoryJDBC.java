@@ -98,7 +98,7 @@ public class RequestRepositoryJDBC implements RequestRepository{
 			LOGGER.error("Exception, could not retreive requests ", e);
 		}
 		
-		return null;
+		return new ArrayList<>();
 	}
 
 	@Override
@@ -132,7 +132,7 @@ public class RequestRepositoryJDBC implements RequestRepository{
 			LOGGER.error("Exception, could not retreive requests ", e);
 		}
 		
-		return null;
+		return new ArrayList<>();
 	}
 
 	@Override
@@ -164,7 +164,7 @@ try(Connection connection = ConnectionUtil.getConnection()) {
 			LOGGER.error("Exception, could not retreive requests ", e);
 		}
 		
-		return null;
+		return new ArrayList<>();
 	}
 
 	@Override
@@ -196,7 +196,7 @@ try(Connection connection = ConnectionUtil.getConnection()) {
 			LOGGER.error("Exception, could not retreive requests ", e);
 		}
 		
-		return null;
+		return new ArrayList<>();
 	}
 
 	@Override
@@ -232,7 +232,7 @@ try(Connection connection = ConnectionUtil.getConnection()) {
 			LOGGER.error("Exception, could not retreive requests ", e);
 		}
 		
-		return null;
+		return new ArrayList<>();
 	}
 	
 	@Override

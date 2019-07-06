@@ -92,7 +92,7 @@ public class UserRepositoryJDBC implements UserRepository{
 		} catch (SQLException e) {
 			LOGGER.error("Exception retrieving user information ", e);
 		}
-		return null;
+		return new Users();
 	}
 
 	@Override
@@ -120,7 +120,7 @@ public class UserRepositoryJDBC implements UserRepository{
 		} catch (SQLException e) {
 			LOGGER.error("Exception, could not retrieve all users ", e);
 		}
-		return null;
+		return new ArrayList<>();
 	}
 	
 	@Override
@@ -150,6 +150,8 @@ public class UserRepositoryJDBC implements UserRepository{
 		return false;
 	}
 	
+	
+	
 	public static void main(String[] args) {
 		
 		//Testing insert
@@ -165,5 +167,7 @@ public class UserRepositoryJDBC implements UserRepository{
 		//LOGGER.info(getUserDaoJdbc().updateInformation(new Users(41, "Jonh","Jonh","jonh@gmail.com","JONH","123")));
 		
 	}
+
+	
 
 }

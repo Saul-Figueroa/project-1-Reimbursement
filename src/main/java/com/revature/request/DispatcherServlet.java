@@ -24,7 +24,7 @@ public class DispatcherServlet extends HttpServlet{
 		
 		if (data instanceof String) {
 			
-			String URI = (String) data;
+			String URI = (String) data;	
 			request.getRequestDispatcher(URI).forward(request, response);
 		} 
 		//else, we marshall the given POJO

@@ -1,10 +1,10 @@
-package com.revature.repository;
+package com.revature.service;
 
 import java.util.List;
 
 import com.revature.model.Users;
 
-public interface UserRepository {
+public interface UserServiceInterface {
 	
 	
 	public boolean insertUser(Users user);
@@ -15,8 +15,8 @@ public interface UserRepository {
 	//Manager can view all employees
 	public List<Users> viewAllEmployees();
 	
+	public Users authenticate(Users user);
+	
 
-	
-	
 
 }

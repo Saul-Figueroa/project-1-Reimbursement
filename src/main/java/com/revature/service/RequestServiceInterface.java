@@ -1,10 +1,10 @@
-package com.revature.repository;
+package com.revature.service;
 
 import java.util.List;
 
 import com.revature.model.Request;
 
-public interface RequestRepository {
+public interface RequestServiceInterface {
 	
 	
 	//Employees can submit requests, view their pending and resolved requests 
@@ -20,10 +20,6 @@ public interface RequestRepository {
 	public List<Request> viewPendingRequestsForAllEmployees();
 	public List<Request> viewResolvedRequestsForAllEmployees();
 	public List<Request> viewAllRequestsOfAnSpecificEmployee(Request request);
-	
-	
-	
-	
 	
 
 }
