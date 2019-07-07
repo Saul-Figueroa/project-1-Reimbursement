@@ -45,7 +45,7 @@ public class UserRepositoryJDBC implements UserRepository{
 			int statementIndex = 0;
 			
 			//Syntax to insert in a store procedure
-			String sql = "{CALL INSERT_USERS (?, ?, ?, ?, ?, ?)}";
+			String sql = "{CALL INSERT_USERS (?, ?, ?, ?, ?, 1)}";
 			// CallableStatement
 			CallableStatement statement = connection.prepareCall(sql);
 			
@@ -55,7 +55,7 @@ public class UserRepositoryJDBC implements UserRepository{
 			statement.setString(++statementIndex, user.getEmail());
 			statement.setString(++statementIndex, user.getUsername());
 			statement.setString(++statementIndex, user.getPassword());
-			statement.setInt(++statementIndex, user.getRole().getId());
+			
 			
 			if(statement.executeUpdate() > 0) {
 				return true;
@@ -184,7 +184,7 @@ public class UserRepositoryJDBC implements UserRepository{
 	public static void main(String[] args) {
 		
 		//Testing insert
-		//LOGGER.info(getUserDaoJdbc().insertUser(new Users("TEST2","TEST2","TEST2","TEST2","TEST2",new Role(1))));
+		//LOGGER.info(getUserDaoJdbc().insertUser(new Users("WILL","WILL","WILL@GMAIL.COM","WILL","123")));
 		
 		//view an specific employee
 		//LOGGER.info(getUserDaoJdbc().viewInformation(new Users(2)));

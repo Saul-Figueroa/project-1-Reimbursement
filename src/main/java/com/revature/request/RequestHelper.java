@@ -3,6 +3,7 @@ package com.revature.request;
 import javax.servlet.http.HttpServletRequest;
 
 import com.revature.controller.LoginController;
+import com.revature.controller.UserController;
 
 public class RequestHelper {
 
@@ -17,7 +18,7 @@ public class RequestHelper {
 			return LoginController.getLoginController().login(request);
 			
 		case "/project-1-Saul-Figueroa/register.do":
-			return "";
+			return UserController.getUserController().register(request);
 			
 
 		default:

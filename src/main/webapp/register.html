@@ -1,12 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Register</title>
-</head>
-<body>
 
-Welcome to register page
+        <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      </head>
+      
+            <body>
 
-</body>
+                <!--     NAVBAR     -->
+        <nav class="navbar navbar-expand-sm navbar-light bg-light ">
+            <a class="navbar-brand" href="#">Register</a>
+
+            <a class="navbar-brand" href="#">
+                <img src="images/revature-logo.png" 
+                style="position:absolute;left:150;top:0; height:50px"
+                 alt="Revaturelogo"></a>
+           
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- collapse will be not allow overlapping-->
+                    <ul class="navbar-nav mr-auto">  </ul> <!-- It will expand the items mr= margin-right-->
+                <a href="login.do">
+                    <button type="button" class="btn btn-danger ml-4">Login</button>
+                </a>
+                
+                
+            </div>
+        </nav>
+                    
+
+        <div class="container">
+
+                <div class="row justify-content-md-center" >
+                        <form method="POST" action="register.do" name="logForm">
+
+                                <div class="form-group">
+                                        <label for="FirstName">First Name</label>
+                                        <input type="text" name="firstname" class="form-control"  placeholder="Enter first name" required="required">                                            
+                                </div>
+
+                                <di class="form-group">
+                                        <label for="FirstName">Last Name</label>
+                                        <input type="text" name="lastname" class="form-control"  placeholder="Enter last name" 	required="required">
+                                </di>
+
+                                <di class="form-group">
+                                        <label for="FirstName">Email</label>
+                                        <input type="email" name="email" class="form-control"  placeholder="Enter email" required="required">
+                                </di>
+                                      
+                                <div class="form-group">
+                                  <label for="exampleInputEmail1">Username</label>
+                                  <input type="text" name="username" class="form-control"  placeholder="Enter username" required="required">
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="exampleInputPassword1">Password</label>
+                                  <input type="password" name="password" class="form-control" placeholder="Enter password" required="required">
+                                </div>                
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <input type="reset" class="btn btn-secondary" value="Clear" id="reset" />
+                                
+                              </form>
+                </div>
+
+        </div>
+                   
+            </body>
 </html>

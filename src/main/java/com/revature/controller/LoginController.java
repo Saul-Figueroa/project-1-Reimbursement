@@ -29,7 +29,7 @@ public class LoginController implements LoginControllerInterface{
 			
 		}
 		
-		Users loggedUser = UserService.getUserService().authenticate(new Users(username, password));
+		Users loggedUser = UserService.getUserService().authenticate(new Users(username.toUpperCase(), password));
 		
 		//if authentication failed
 		if (loggedUser == null) {
