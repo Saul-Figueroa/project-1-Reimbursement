@@ -8,7 +8,7 @@ import com.revature.repository.UserRepositoryJDBC;
 public class UserService implements UserServiceInterface{
 	
 		/*Singleton*/
-	private static UserService userService;
+	private static UserService userService = new UserService();
 	
 	private UserService() {
 	}
@@ -45,6 +45,15 @@ public class UserService implements UserServiceInterface{
 
 	@Override
 	public Users authenticate(Users user) {
+		
+		//information in the data base
+		Users loggedUser = UserRepositoryJDBC.getUserDaoJdbc().authenticate(user);
+	
+		
+		if (loggedUser.getPassword().equals(user.getPassword())) {
+			return loggedUser;
+			
+		}
 		
 		return null;
 	}

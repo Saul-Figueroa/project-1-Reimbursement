@@ -15,6 +15,9 @@ public interface UserRepository {
 	//Manager can view all employees
 	public List<Users> viewAllEmployees();
 	
+	//validate username 
+	public Users authenticate(Users user);
+	
 
 	
 	

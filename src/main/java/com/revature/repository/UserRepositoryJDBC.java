@@ -150,6 +150,35 @@ public class UserRepositoryJDBC implements UserRepository{
 		return false;
 	}
 	
+	@Override
+	public Users authenticate(Users user) {
+			
+		try(Connection connection = ConnectionUtil.getConnection()) {
+			int statementIndex = 0;
+			
+			String sql = "SELECT * FROM USERS WHERE U_USERNAME=?";
+			// PreparedStatement
+			PreparedStatement statement = connection.prepareStatement(sql);
+			//Set attributes to be inserted
+			statement.setString(++statementIndex, user.getUsername());
+			ResultSet result = statement.executeQuery();
+			
+			if(result.next()) {
+				return new Users(
+						result.getInt("U_ID"),
+						result.getString("U_FNAME"),
+						result.getString("U_LNAME"),
+						result.getString("U_EMAIL"),
+						result.getString("U_USERNAME"),
+						result.getString("U_PASSWORD"),
+						new Role(result.getInt("R_ROLE"))
+						);
+			}
+		} catch (SQLException e) {
+			LOGGER.error("Exception retrieving user information ", e);
+		}
+		return new Users();
+	}
 	
 	
 	public static void main(String[] args) {
@@ -166,7 +195,12 @@ public class UserRepositoryJDBC implements UserRepository{
 		//update information
 		//LOGGER.info(getUserDaoJdbc().updateInformation(new Users(41, "Jonh","Jonh","jonh@gmail.com","JONH","123")));
 		
+		//Select * using username 
+		//LOGGER.info(getUserDaoJdbc().authenticate(new Users("JONH")));
+		
 	}
+
+	
 
 	
 

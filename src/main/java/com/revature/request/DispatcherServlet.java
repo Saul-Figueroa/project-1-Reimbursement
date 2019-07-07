@@ -11,10 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class DispatcherServlet extends HttpServlet{
 
-	/**
-	 * For java 2 compatibility
-	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 5244611926643604805L;
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

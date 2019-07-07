@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Login</title>
-</head>
-<body>
 
-<h1>Welcome to login</h1>
+        <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      </head>
+      
+            <body>
 
-</body>
+                <!--     NAVBAR     -->
+        <nav class="navbar navbar-expand-sm navbar-light bg-light ">
+            <a class="navbar-brand" href="#">Login</a>
+
+            <a class="navbar-brand" href="#">
+                <img src="images/revature-logo.png" 
+                style="position:absolute;left:150;top:0; height:50px"
+                 alt="Revaturelogo"></a>
+           
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- collapse will be not allow overlapping-->
+                    <ul class="navbar-nav mr-auto">  </ul> <!-- It will expand the items mr= margin-right-->
+                <a href="register.do">
+                    <button type="button" class="btn btn-danger ml-4">Register</button>
+                </a>
+                
+                
+            </div>
+        </nav>
+                    <div class="col-sm-12 d-flex justify-content-center" >
+                            <form method="POST" action="login.do" name="logForm" onsubmit="return validateform()">
+                                    <div class="form-group">
+                                      <label for="exampleInputEmail1">Username
+                                            <i class="fas fa-user"></i>
+                                      </label>
+                                      <input type="text" name="username" class="form-control" aria-describedby="emailHelp" placeholder="Enter username">
+                                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="exampleInputPassword1">Password
+                                            <i class="fas fa-lock"></i>
+                                      </label>
+                                      <input type="password" name="password" class="form-control" placeholder="Password">
+                                    </div>                
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                  </form>
+                    </div>
+                    
+   <script>
+        function validateform(){
+            var name = document.logForm.username.value;
+            var password = document.logForm.password.value;
+
+            if (name == null || name =="") {
+                alert("Name can't be blank");
+                return false;
+            } else if(password == null || password ==""){
+                alert("Password can't be blank");
+                return false;
+            }
+                return true;
+            
+
+            
+        }
+    
+    </script>
+
+                   
+            </body>
 </html>

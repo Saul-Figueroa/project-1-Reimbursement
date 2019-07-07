@@ -2,6 +2,8 @@ package com.revature.request;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.revature.controller.LoginController;
+
 public class RequestHelper {
 
 	private RequestHelper () {
@@ -12,10 +14,14 @@ public class RequestHelper {
 	
 		switch (request.getRequestURI()) {
 		case "/project-1-Saul-Figueroa/login.do":
+			return LoginController.getLoginController().login(request);
+			
+		case "/project-1-Saul-Figueroa/register.do":
+			return "";
 			
 
 		default:
-			return "not-implemented.html";
+			return "/project-1-Saul-Figueroa/not-implemented.html";
 		}
 		
 		
