@@ -17,6 +17,8 @@ public interface UserServiceInterface {
 	
 	public Users authenticate(Users user);
 	
+	public String home(Users user);
+	
 
 
 }

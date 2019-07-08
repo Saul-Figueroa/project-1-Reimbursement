@@ -58,6 +58,20 @@ public class UserService implements UserServiceInterface{
 		return null;
 	}
 
+	@Override
+	public String home(Users user) {
+		//if user is not logged in
+		
+		if (user.getRole().getId() == 2) {
+			return "AdminHome.html";
+		} 
+			return "UserHome.html";
+		
+		
+	}
+
+	
+
 }
 
 

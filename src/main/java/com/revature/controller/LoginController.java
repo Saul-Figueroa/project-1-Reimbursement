@@ -1,6 +1,7 @@
 package com.revature.controller;
 
 import javax.servlet.http.HttpServletRequest;
+
 import com.revature.ajax.ClientMessage;
 import com.revature.model.Users;
 import com.revature.service.UserService;
@@ -39,9 +40,10 @@ public class LoginController implements LoginControllerInterface{
 		
 		//store the customer information in the session
 		request.getSession().setAttribute("loggedUser", loggedUser);
+	
 		
+		return LoginController.viewHome(request);
 		
-		return loggedUser;
 	}
 
 	@Override
@@ -49,6 +51,17 @@ public class LoginController implements LoginControllerInterface{
 	
 		request.getSession().invalidate();
 		return "login.html";
+	}
+	
+	
+	public static String viewHome(HttpServletRequest request) {
+		
+		if (request.getSession().getAttribute("loggedUser") == null) {
+			return "login.html";
+		}
+		
+		return UserService.getUserService().home((Users) request.getSession().getAttribute("loggedUser"));
+		
 	}
 	
 
