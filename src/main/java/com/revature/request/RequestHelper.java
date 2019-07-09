@@ -2,7 +2,7 @@ package com.revature.request;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.revature.controller.HomeController;
+import com.revature.controller.RequestController;
 import com.revature.controller.LoginController;
 import com.revature.controller.UserController;
 
@@ -33,8 +33,15 @@ public class RequestHelper {
 		case "/project-1-Saul-Figueroa/updateemployee.do":
 			return UserController.getUserController().updateInformation(request);
 		//employee can send a request
+		case "/project-1-Saul-Figueroa/sendrequest.do":
+			return RequestController.getRequestController().submit(request);
+		
 		//employee can view his pending requests
+		case "/project-1-Saul-Figueroa/viewpendingrequests.do":
+			return RequestController.getRequestController().viewPendingRequest(request);
 		//employee can view his resolved requests
+		case "/project-1-Saul-Figueroa/viewresolvedrequests.do":
+			return RequestController.getRequestController().viewResolvedRequest(request);
 		
 			//manager view all employees
 		case "/project-1-Saul-Figueroa/viewallemployees.do":
