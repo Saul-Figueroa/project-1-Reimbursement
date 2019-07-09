@@ -50,6 +50,7 @@ public class LoginController implements LoginControllerInterface{
 	public String logout(HttpServletRequest request) {
 	
 		request.getSession().invalidate();
+		//request.getSession().setAttribute("loggedUser", null);
 		return "login.html";
 	}
 	

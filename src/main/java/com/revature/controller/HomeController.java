@@ -17,13 +17,21 @@ public class HomeController implements HomeControllerInterface{
 
 	@Override
 	public String home(HttpServletRequest request) {
-		return null;
+		
+		Users loggedUser = (Users) request.getSession().getAttribute("loggedUser");
+		
+		//if user is not logged in
+		if (loggedUser == null) {
+			return "login.html";
+		}
 		
 		
-		
-		
-		
-								
+		if (loggedUser.getRole().equals(2)) {
+			return "AdminHome.html";
+		} 
+			return "UserHome.html";
+			
+									
 	}
 
 }

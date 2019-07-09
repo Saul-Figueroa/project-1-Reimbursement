@@ -18,11 +18,29 @@ public class RequestHelper {
 		case "/project-1-Saul-Figueroa/login.do":
 			return LoginController.getLoginController().login(request);
 			
+		case "/project-1-Saul-Figueroa/logout.do":
+			return LoginController.getLoginController().logout(request);
+			
 		case "/project-1-Saul-Figueroa/register.do":
 			return UserController.getUserController().register(request);
 			
 		case "/project-1-Saul-Figueroa/home.do":
 			return LoginController.viewHome(request);
+		//view employee information 
+		case "/project-1-Saul-Figueroa/viewemployee.do":
+			return UserController.getUserController().viewInformation(request);
+		//employee update his information
+		case "/project-1-Saul-Figueroa/updateemployee.do":
+			return UserController.getUserController().updateInformation(request);
+		//employee can send a request
+		//employee can view his pending requests
+		//employee can view his resolved requests
+		
+			//manager view all employees
+		case "/project-1-Saul-Figueroa/viewallemployees.do":
+			return UserController.getUserController().viewAllEmployees(request);
+			
+			
 			
 			
 

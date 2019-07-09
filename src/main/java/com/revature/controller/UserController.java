@@ -42,20 +42,47 @@ public class UserController implements UserControllerInterface{
 
 	@Override
 	public Object viewInformation(HttpServletRequest request)	 {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Users loggedUser = (Users) request.getSession().getAttribute("loggedUser");
+		
+		//if customer is not logged in
+		if (loggedUser == null) {
+			return "login.html";
+		}
+		
+		return UserService.getUserService().viewInformation(loggedUser);
 	}
 
 	@Override
 	public Object updateInformation(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		String fname = request.getParameter("firstname");
+		String lname = request.getParameter("lastname");
+		String email = request.getParameter("email");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+     
+		Users loggedUser = (Users) request.getSession().getAttribute("loggedUser");
+		
+		//if customer is not logged in
+		if (loggedUser == null) {
+			return "login.html";
+		}
+		
+		Users user = new Users(loggedUser.getId(), fname.toUpperCase(), lname.toUpperCase(), email.toUpperCase(), username.toUpperCase(), password);
+		
+		return UserService.getUserService().updateInformation(user);
 	}
 
 	@Override
 	public Object viewAllEmployees(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
+		Users loggedUser = (Users) request.getSession().getAttribute("loggedUser");
+
+		//if customer is not logged in
+		if (loggedUser == null) {
+			return "login.html";
+		}
+		return UserService.getUserService().viewAllEmployees();
 	}
 
 }
