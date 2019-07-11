@@ -45,6 +45,7 @@ public class UserController implements UserControllerInterface{
 		
 		Users loggedUser = (Users) request.getSession().getAttribute("loggedUser");
 		
+		
 		//if customer is not logged in
 		if (loggedUser == null) {
 			return "login.html";

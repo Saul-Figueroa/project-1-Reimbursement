@@ -43,9 +43,17 @@ public class RequestHelper {
 		case "/project-1-Saul-Figueroa/viewresolvedrequests.do":
 			return RequestController.getRequestController().viewResolvedRequest(request);
 		
-			//manager view all employees
+		//manager view all employees
 		case "/project-1-Saul-Figueroa/viewallemployees.do":
 			return UserController.getUserController().viewAllEmployees(request);
+			
+		//manager can update the request
+			
+		//manager can view all pending requests for all employees
+			
+		//manager can view all resolved requests for all employees
+			
+		//manager can view requests of an specific employee
 			
 			
 			
