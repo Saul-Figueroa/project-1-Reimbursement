@@ -87,7 +87,6 @@ public class RequestRepositoryJDBC implements RequestRepository{
 						result.getDate("R_TIMESTAMP"),
 						result.getDouble("R_AMOUNT"),
 						result.getString("R_DESCRIPTION"),
-						new Users(result.getString("U_FNAME")),
 						new Status(result.getString("S_NAME"))
 						
 						));

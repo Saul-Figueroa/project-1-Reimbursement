@@ -73,14 +73,14 @@ public class RequestController implements RequestControllerInterface{
 
 	@Override
 	public Object viewPendingRequestsForAllEmployees() {
-		// TODO Auto-generated method stub
-		return null;
+	
+		return RequestService.getRequestService().viewPendingRequestsForAllEmployees();
 	}
 
 	@Override
 	public Object viewResolvedRequestsForAllEmployees() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return RequestService.getRequestService().viewResolvedRequestsForAllEmployees();
 	}
 
 	@Override
