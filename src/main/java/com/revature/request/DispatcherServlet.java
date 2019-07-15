@@ -7,14 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class DispatcherServlet extends HttpServlet{
+	private static final Logger LOGGER = Logger.getLogger(DispatcherServlet.class);
 
 	private static final long serialVersionUID = 5244611926643604805L;
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		LOGGER.trace("doget method "+request.getQueryString());
+		
 		Object data = RequestHelper.process(request);
 		
 		//if the controller return a string, we forward to an HTML file

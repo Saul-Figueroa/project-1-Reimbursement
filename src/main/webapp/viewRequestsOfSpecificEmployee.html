@@ -1,0 +1,93 @@
+<html>
+        <head>
+                <title>Bootstrap Example</title>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+                <script>
+                
+                        function viewPendingRequests(){
+                            var xmlhttp = new XMLHttpRequest();
+                            xmlhttp.open("GET", "viewRequestsOfSpecificEmployee.do?id="+document.myForm.e_id.value, true);
+                            xmlhttp.onreadystatechange=function(){
+                                
+                                if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                                    
+                                    let data = JSON.parse(xmlhttp.responseText);
+                                    console.log(xmlhttp.responseText);
+                                    var text = "";
+                                    var i = 0;
+                                    do {
+                                        text +="<tr>"+
+                                            "<td>"+data[i].id+"</td>"+
+                                            "<td>"+data[i].timestamp+"</td>"+
+                                            "<td>"+data[i].amount+"</td>"+
+                                            "<td>"+data[i].description+"</td>"+ 
+                                            "<td>"+data[i].status.name+"</td>"+
+                                            "</tr>";
+                                        i++;
+                                    } while (data[i] != null);
+                                    document.getElementById("demo").innerHTML = text;
+                                }
+                            }
+                            
+                            
+                            xmlhttp.send();
+                        
+                            return false;//don't return information
+                        }
+                                </script>
+
+              </head>
+
+    <body>
+
+            <div class="container">
+
+                    <div class="row justify-content-md-center" >
+                            <form method="POST" action="viewRequestsOfSpecificEmployee.do" name="myForm" id="myForm" onsubmit="return viewPendingRequests();">
+    
+                                    <div class="form-group">
+                                            <label for="FirstName">Enter employee id</label>
+                                            <input type="number" name="e_id" id="e_id" class="form-control"  placeholder="Enter id" required="required">                                            
+                                    </div>
+                                           
+                                    <input type="submit" class="btn btn-primary" value="Update" onclick="return viewPendingRequests();"/>
+                                    
+                                  </form>
+                    </div>
+    
+            </div>
+
+                            <div class="col-sm-8" >
+                                    <table align="center" class="table table-hover">
+                                            <thead>
+                                                <tr class="success">
+                                                    <th>Requests id</th>
+                                                    <th>Submited date</th>
+                                                    <th>Amount</th>
+                                                    <th>Description</th>
+                                                    <th>Status</th>
+                                                    
+                                                </tr>
+                                            </thead>
+                                        
+                                            <tbody id="demo">
+
+                                                         
+                                            </tbody>
+                                        
+                                        </table>
+                            
+                            </div>
+                  
+
+        
+    </body>
+</html>

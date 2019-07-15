@@ -273,7 +273,7 @@ try(Connection connection = ConnectionUtil.getConnection()) {
 		//LOGGER.info(getRequestDaoJdbc().viewResolvedRequestsForAllEmployees());
 		
 		//view all requests af an specific employee
-		//LOGGER.info(getRequestDaoJdbc().viewAllRequestsOfAnSpecificEmployee(new Request(new Users(21))));
+		LOGGER.info(getRequestDaoJdbc().viewAllRequestsOfAnSpecificEmployee(new Request(new Users(21))));
 		
 		//update request status
 		//LOGGER.info(getRequestDaoJdbc().updateStatus(new Request(new Status(22), 21)));

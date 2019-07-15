@@ -66,9 +66,26 @@ public class RequestController implements RequestControllerInterface{
 	}
 
 	@Override
-	public Object updateStatus(Request request) {
-		// TODO Auto-generated method stub
-		return null;
+	public Object updateStatus(HttpServletRequest request) {
+		
+		String status_string = request.getParameter("r_status");
+		int r_status = Integer.valueOf(status_string);
+		
+		String r_id_string = request.getParameter("r_id");
+		int r_id = Integer.valueOf(r_id_string);
+		
+		Users loggedUser = (Users) request.getSession().getAttribute("loggedUser");
+
+		//if customer is not logged in
+		if (loggedUser == null) {
+			return "login.html";
+		}
+		
+		Request req = new Request(new Status(r_status), r_id);
+		
+		
+		return RequestService.getRequestService().updateStatus(req);
+	
 	}
 
 	@Override
@@ -85,8 +102,20 @@ public class RequestController implements RequestControllerInterface{
 
 	@Override
 	public Object viewAllRequestsOfAnSpecificEmployee(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		
+		int e_id = Integer.parseInt(request.getParameter("id"));
+	
+		Users loggedUser = (Users) request.getSession().getAttribute("loggedUser");
+
+		//if customer is not logged in
+		if (loggedUser == null) {
+			return "login.html";
+		}
+		
+		Request req = new Request(new Users(e_id));
+		
+		return RequestService.getRequestService().viewAllRequestsOfAnSpecificEmployee(req);
 	}
 	
 	

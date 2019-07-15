@@ -57,9 +57,12 @@ public class RequestHelper {
 			
 			
 		//manager can view requests of an specific employee
+		case "/project-1-Saul-Figueroa/viewRequestsOfSpecificEmployee.do":
+			return RequestController.getRequestController().viewAllRequestsOfAnSpecificEmployee(request);
 		
 		//manager can update the request
-			
+		case "/project-1-Saul-Figueroa/updateRequest.do":
+			return RequestController.getRequestController().updateStatus(request);
 			
 			
 			

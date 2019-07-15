@@ -16,7 +16,7 @@ public interface RequestControllerInterface {
 	
 	//Managers can Approve/Deny pending requests, view all pending requests for all employees, 
 	//view all resolved requests for all employees, view requests of an specific employee, 
-	public Object updateStatus(Request request);
+	public Object updateStatus(HttpServletRequest request);
 	public Object viewPendingRequestsForAllEmployees();
 	public Object viewResolvedRequestsForAllEmployees();
 	public Object viewAllRequestsOfAnSpecificEmployee(HttpServletRequest request);
